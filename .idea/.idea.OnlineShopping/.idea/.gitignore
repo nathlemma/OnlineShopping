@@ -109,3 +109,4 @@ local.settings.json
 
 # Ignore Unity3D files
 .unity/
+**/Properties/AssemblyInfo.cs
