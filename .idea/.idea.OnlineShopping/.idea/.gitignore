@@ -1,0 +1,111 @@
+# Ignore build and publish outputs
+bin/
+obj/
+out/
+publish/
+
+# Ignore Rider and JetBrains IDE settings
+.idea/
+*.iml
+.shelf/
+workspace.xml
+/modules.xml
+/projectSettingsUpdater.xml
+/contentModel.xml
+/.idea.OnlineShopping.iml
+
+# Ignore Visual Studio specific files
+.vscode/
+.vs/
+*.user
+*.suo
+*.sln.cache
+*.csproj.user
+
+# Ignore NuGet package files
+packages/
+*.nupkg
+*.snupkg
+
+# Ignore dependency directories
+node_modules/
+
+# Ignore log, temporary, and cache files
+*.log
+logs/
+temp/
+*.tmp
+*.swp
+*.bak
+
+# Ignore database and EF migration files
+Migrations/
+*.mdf
+*.ldf
+*.sqlite
+*.db
+
+# Ignore Editor-based HTTP Client requests
+httpRequests/
+
+# Ignore datasource local storage files
+dataSources/
+dataSources.local.xml
+
+# Ignore secrets and environment files
+appsettings.Development.json
+secrets.json
+.env
+.env.local
+.env.*.local
+
+# Ignore compiled files
+*.dll
+*.exe
+*.pdb
+*.cache
+*.db-shm
+*.db-wal
+*.pid
+
+# Ignore ReSharper files
+*.DotSettings
+*.DotSettings.user
+
+# Ignore Auto-Generated Code
+Generated/
+ServiceFabricBackup/
+
+# Ignore Test Results
+TestResults/
+Coverage/
+*.coverage
+*.coveragexml
+*.cov
+lcov.info
+coverage.opencover.xml
+
+# Ignore Docker-related files
+.docker/
+docker-compose.override.yml
+
+# Ignore Azure Functions files
+extensions.csproj
+local.settings.json
+.funcignore
+
+# Ignore User-specific Visual Studio files
+.vs2019/
+.vs2017/
+
+# Ignore Visual Studio Code user settings
+.vscode/settings.json
+.vscode/tasks.json
+.vscode/launch.json
+.vscode/extensions.json
+
+# Ignore Xamarin Studio files
+.xamarin/
+
+# Ignore Unity3D files
+.unity/
