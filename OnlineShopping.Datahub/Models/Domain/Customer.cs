@@ -1,6 +1,3 @@
-using System;
-using System.Collections.Generic;
-
 namespace OnlineShopping.Datahub.Models.Domain
 {
     public class Customer

@@ -1,6 +1,3 @@
-using System;
-using System.Collections.Generic;
-
 namespace OnlineShopping.Datahub.Models.Domain
 {
     public enum OrderStatus
@@ -11,7 +8,7 @@ namespace OnlineShopping.Datahub.Models.Domain
         Delivered,
         Cancelled
     }
-
+    
     public class Order
     {
         public int Id { get; set; }

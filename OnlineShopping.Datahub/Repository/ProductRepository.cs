@@ -1,9 +1,5 @@
 using Microsoft.EntityFrameworkCore;
 using OnlineShopping.Datahub.Models.Domain;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 
 namespace OnlineShopping.Datahub.Repository
 {
@@ -40,8 +36,7 @@ namespace OnlineShopping.Datahub.Repository
         public async Task<Product> UpdateProduct(Product product)
         {
             var existingProduct = await _context.Products.FindAsync(product.Id);
-            if (existingProduct == null || !existingProduct.IsActive)
-                return null;
+            if (existingProduct == null || !existingProduct.IsActive) return null;
 
             existingProduct.Name = product.Name;
             existingProduct.Description = product.Description;
@@ -56,8 +51,7 @@ namespace OnlineShopping.Datahub.Repository
         public async Task<bool> DeleteProduct(int id)
         {
             var product = await _context.Products.FindAsync(id);
-            if (product == null || !product.IsActive)
-                return false;
+            if (product == null || !product.IsActive) return false;
 
             product.IsActive = false;
             product.ModifiedDate = DateTime.Now;
@@ -68,8 +62,7 @@ namespace OnlineShopping.Datahub.Repository
 
         public async Task<bool> IsNameUnique(string name, int? excludeId = null)
         {
-            if (excludeId.HasValue)
-                return !await _context.Products.AnyAsync(p => p.Name == name && p.Id != excludeId.Value);
+            if (excludeId.HasValue) return !await _context.Products.AnyAsync(p => p.Name == name && p.Id != excludeId.Value);
                 
             return !await _context.Products.AnyAsync(p => p.Name == name);
         }

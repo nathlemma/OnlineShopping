@@ -1,6 +1,4 @@
 using OnlineShopping.Datahub.Models.Domain;
-using System.Collections.Generic;
-using System.Threading.Tasks;
 
 namespace OnlineShopping.Datahub.Repository
 {

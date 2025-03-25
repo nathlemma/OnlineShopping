@@ -1,9 +1,5 @@
 using Microsoft.EntityFrameworkCore;
 using OnlineShopping.Datahub.Models.Domain;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 
 namespace OnlineShopping.Datahub.Repository
 {
@@ -44,8 +40,6 @@ namespace OnlineShopping.Datahub.Repository
             order.CreatedDate = DateTime.Now;
             order.OrderDate = DateTime.Now;
             order.IsActive = true;
-            
-            // Calculate the total amount
             order.TotalAmount = order.OrderItems.Sum(oi => oi.Subtotal);
             
             await _context.Orders.AddAsync(order);

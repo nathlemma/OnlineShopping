@@ -5,10 +5,7 @@ namespace OnlineShopping.Datahub
 {
     public class OnlineShoppingDbContext : DbContext
     {
-        public OnlineShoppingDbContext(DbContextOptions<OnlineShoppingDbContext> options) : base(options)
-        {
-        }
-
+        public OnlineShoppingDbContext(DbContextOptions<OnlineShoppingDbContext> options) : base(options) {}
         public DbSet<Customer> Customers { get; set; }
         public DbSet<Product> Products { get; set; }
         public DbSet<Order> Orders { get; set; }
